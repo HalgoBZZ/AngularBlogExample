@@ -1,0 +1,10 @@
+<div class="container" *ngIf="item">
+    <div class="float-right">{{ item.created_at | date:'short' }}</div>
+    <h2>{{ item.title }}</h2>
+    <p>{{ item.content }}</p>
+    <div>
+    <button class="btn btn-success" (click)="loveIt()">Love it</button>
+    <button class="btn btn-danger" (click)="dontLoveIt()">Don't love it</button>
+    <button class="btn float-right btn-danger" (click)="delete()">Supprimer</button>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+<h1>Posts</h1>
+<div *ngFor="let post of list; let i=index">
+  <div *ngIf="post" class="list-group" [ngClass]="{'list-group-item-success':post.loveIts>0,'list-group-item-danger':post.loveIts<0}">
+    <app-post-list-item [item]="post" [index]="i"></app-post-list-item>
+  </div>
+</div>
+
